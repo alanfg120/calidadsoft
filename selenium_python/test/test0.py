@@ -11,7 +11,7 @@ class eis_test(unittest.TestCase):
 	def test_load(self):
 		browser = self.browser
 		browser.get("https://www.unillanos.edu.co/")
-		self.assertIn("Universidad de los Llanos x", browser.title)
+		self.assertIn("Universidad de los Llanos", browser.title)
 	def tearDown(self):
 		self.browser.quit()
 
