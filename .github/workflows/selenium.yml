@@ -40,5 +40,6 @@ jobs:
       - name: Run Selenium Tests
         env:
           DISPLAY: ":99"  # Required for the Xvfb virtual display
+        working-directory: selenium-chromedriver
         run: |
           python -m unittest discover -s tests
