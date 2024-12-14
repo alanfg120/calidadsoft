@@ -12,7 +12,6 @@ class eis_test(unittest.TestCase):
 		browser = self.browser
 		browser.get("https://www.unillanos.edu.co/")
 		self.assertIn("Universidad de los Llanos x", browser.title)
-		
 	def tearDown(self):
 		self.browser.quit()
 
