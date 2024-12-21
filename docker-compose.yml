@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - "8080:8080" # Puerto para acceder a Jenkins
+      - "50000:50000" # Puerto para agentes remotos
+    volumes:
+      - jenkins_home:/var/jenkins_home # Volumen para datos persistentes
+    restart: always
+
+volumes:
+  jenkins_home:
